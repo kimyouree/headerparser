@@ -20,9 +20,28 @@ app.get("/", function (req, res) {
 });
 
 // your first API endpoint...
-app.get("/api/hello", function (req, res) {
-	res.json({ greeting: "hello API" });
-});
+
+/**
+ * ❤️‍🔥❤️‍🔥❤️‍🔥 Resource used: https://expressjs.com/en/5x/api.html#req ❤️‍🔥❤️‍🔥❤️‍🔥
+ * `req, res` are values on the `express` object
+ *  refer to those docs for instructions on api usage
+ *
+ * result:
+ * {
+ *  ipaddress: remote address
+ *  language: accept-language
+ *  software: user-agent
+ * }
+ *
+ * network tab:
+ * GENERAL:
+ * Remote Address: 172.67.171.152:443
+ *
+ * REQUEST HEADERS:
+ * Accept-Language: en-US,en;q=0.9
+ * user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
+ *
+ */
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT || 3000, function () {
